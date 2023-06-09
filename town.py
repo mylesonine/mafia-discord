@@ -251,7 +251,7 @@ async def play_night_end(game, player):
 				if is_town(vote.role) and vote.role != Role.veteran:
 					print(f'Vigilante {player.name} will die next turn.')
 					player.role_data['die_next_turn'] = vote.id
-					player.role_data['bullets_remaining'] = 0 # player can no longer shoot
+					
 				elif vote.role == Role.veteran and vote.role_data['on_alert']:
 					print(f'Vigilante {player.name} visited veteran on alert and died.')
 					return player
